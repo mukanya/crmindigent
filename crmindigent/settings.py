@@ -16,17 +16,13 @@ import os
 import environ
 
 env = environ.Env(
-    # set casting, default value
-    DEBUG=(bool, True)
+    DEBUG=(bool, False)
 )
 
 READ_DOT_ENV_FILE = env.bool('READ_DOT_ENV_FILE', default=False)
 if READ_DOT_ENV_FILE:
-     environ.Env.read_env()
-# reading .env file
-
-
-# False if not in os.environ
+    environ.Env.read_env()
+    
 DEBUG = env('DEBUG')
 SECRET_KEY = env('SECRET_KEY')
 
