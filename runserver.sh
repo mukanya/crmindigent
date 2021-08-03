@@ -4,4 +4,3 @@ python manage.py migrate
 
 gunicorn --worker-tmp-dir /dev/shm crmindigent.wsgi
 
-#executable file
