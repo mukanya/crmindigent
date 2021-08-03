@@ -1,0 +1,48 @@
+{% extends "base.html"%}
+{% load tailwind_filters %}
+
+{% block content %}
+
+<div class="max-w-lg mx-auto">
+
+    <a class="hover:text-blue-500" href="{% url 'leads:lead-list' %}">Go back to Indigents</a>
+    
+<div class="py-5 border-t border-gray-200">
+    <h1 class="text-4xl text-gray-800">Support Documentations List</h1>
+  </div>
+  
+  
+    {% for book in books %}
+ 
+      <h1> Name:  {{book.name}} {{book.surname}}  </h1>
+        
+        <h1> Click to view the below documentations of  {{book.name}} {{book.surname}}</h1>
+        
+        <div>
+          
+         <a href="{{book.bank_statement.url}}" target = "blank"> bank_statement </a>
+          </div>
+          <div> 
+         <a href="{{book.proof_residence.url}}" target = "blank"> proof_residence</a> 
+          </div>
+         
+         <div> 
+         <a href="{{book.id_copy.url}}" target = "blank"> id_copy </a> 
+          </div>
+
+          <div> 
+         <a href="{{book.water_proof.url}}" target = "blank">  water_proof </a> 
+          </div>
+
+         <div> 
+         <a href="{{book.electricity_proof.url}}" target = "blank">electricity_proof </a> 
+          </div>
+
+          <div> 
+         <a href="{{book.sworn_affidavit.url}}" target = "blank"> sworn_affidavit </a> 
+          </div>
+       
+    {% endfor %}
+</div>
+
+{% endblock content %}

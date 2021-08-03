@@ -1,0 +1,6 @@
+username = doadmin
+password = p1y0eriibzalfssi
+host = crmindigent-do-user-9574192-0.b.db.ondigitalocean.com
+port = 25060
+database = defaultdb
+sslmode = require
