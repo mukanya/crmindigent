@@ -1,0 +1,14 @@
+{
+    "builds": [
+      {
+        "src": "crmindigent/wsgi.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "crmindigent/wsgi.py"
+      }
+    ]
+}
