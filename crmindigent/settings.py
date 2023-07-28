@@ -16,7 +16,7 @@ import os
 import environ
 
 env = environ.Env(
-    DEBUG=(bool, False)
+    DEBUG=(bool, True)
 )
 
 # READ_DOT_ENV_FILE = env.bool('READ_DOT_ENV_FILE', default=False)
